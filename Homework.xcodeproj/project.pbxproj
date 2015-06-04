@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A19285791B20918000AC17E2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19285781B20918000AC17E2 /* CloudKit.framework */; };
+		A192857E1B20A73C00AC17E2 /* DisciplinaCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192857D1B20A73C00AC17E2 /* DisciplinaCloud.swift */; };
+		A19285801B20A80100AC17E2 /* AvaliacaoCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192857F1B20A80100AC17E2 /* AvaliacaoCloud.swift */; };
+		A19285821B20A8C000AC17E2 /* TarefaCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19285811B20A8C000AC17E2 /* TarefaCloud.swift */; };
+		A19285841B20AAA200AC17E2 /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19285831B20AAA200AC17E2 /* CloudKitHelper.swift */; };
+		A19285861B20D57E00AC17E2 /* InformacaoUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19285851B20D57E00AC17E2 /* InformacaoUsuario.swift */; };
+		A19285881B20FCA900AC17E2 /* Calendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19285871B20FCA900AC17E2 /* Calendario.swift */; };
+		A192858A1B20FD7500AC17E2 /* OrganizaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19285891B20FD7500AC17E2 /* OrganizaData.swift */; };
 		E4D528811B1E9176009859D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D528801B1E9176009859D8 /* AppDelegate.swift */; };
 		E4D528841B1E9176009859D8 /* Homework.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E4D528821B1E9176009859D8 /* Homework.xcdatamodeld */; };
 		E4D528861B1E9176009859D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D528851B1E9176009859D8 /* ViewController.swift */; };
@@ -32,6 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A19285771B20915000AC17E2 /* Homework.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Homework.entitlements; sourceTree = "<group>"; };
+		A19285781B20918000AC17E2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		A192857D1B20A73C00AC17E2 /* DisciplinaCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinaCloud.swift; sourceTree = "<group>"; };
+		A192857F1B20A80100AC17E2 /* AvaliacaoCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacaoCloud.swift; sourceTree = "<group>"; };
+		A19285811B20A8C000AC17E2 /* TarefaCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarefaCloud.swift; sourceTree = "<group>"; };
+		A19285831B20AAA200AC17E2 /* CloudKitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
+		A19285851B20D57E00AC17E2 /* InformacaoUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacaoUsuario.swift; sourceTree = "<group>"; };
+		A19285871B20FCA900AC17E2 /* Calendario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendario.swift; sourceTree = "<group>"; };
+		A19285891B20FD7500AC17E2 /* OrganizaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizaData.swift; sourceTree = "<group>"; };
 		E4D5287B1B1E9176009859D8 /* Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D5287F1B1E9176009859D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D528801B1E9176009859D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19285791B20918000AC17E2 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,9 +86,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A192857A1B20A60600AC17E2 /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				A19285831B20AAA200AC17E2 /* CloudKitHelper.swift */,
+				A19285851B20D57E00AC17E2 /* InformacaoUsuario.swift */,
+				A192857D1B20A73C00AC17E2 /* DisciplinaCloud.swift */,
+				A192857F1B20A80100AC17E2 /* AvaliacaoCloud.swift */,
+				A19285811B20A8C000AC17E2 /* TarefaCloud.swift */,
+			);
+			name = CloudKit;
+			sourceTree = "<group>";
+		};
 		E4D528721B1E9175009859D8 = {
 			isa = PBXGroup;
 			children = (
+				A19285781B20918000AC17E2 /* CloudKit.framework */,
 				E4D5287D1B1E9176009859D8 /* Homework */,
 				E4D528961B1E9176009859D8 /* HomeworkTests */,
 				E4D5287C1B1E9176009859D8 /* Products */,
@@ -89,10 +120,14 @@
 		E4D5287D1B1E9176009859D8 /* Homework */ = {
 			isa = PBXGroup;
 			children = (
+				A19285771B20915000AC17E2 /* Homework.entitlements */,
+				A192857A1B20A60600AC17E2 /* CloudKit */,
 				E4E8216D1B20728B0096F22D /* Navigation 1 */,
 				E4E821661B1FB19B0096F22D /* Entidades */,
 				E4D528A61B1E93FC009859D8 /* CoreData */,
 				E4D528801B1E9176009859D8 /* AppDelegate.swift */,
+				A19285871B20FCA900AC17E2 /* Calendario.swift */,
+				A19285891B20FD7500AC17E2 /* OrganizaData.swift */,
 				E4D528851B1E9176009859D8 /* ViewController.swift */,
 				E4D528871B1E9176009859D8 /* Main.storyboard */,
 				E4D5288A1B1E9176009859D8 /* Images.xcassets */,
@@ -203,6 +238,12 @@
 				TargetAttributes = {
 					E4D5287A1B1E9176009859D8 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 63SRE9K6S5;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					E4D528921B1E9176009859D8 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -255,11 +296,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4D528A81B1E9423009859D8 /* CoreData.swift in Sources */,
+				A192857E1B20A73C00AC17E2 /* DisciplinaCloud.swift in Sources */,
+				A19285841B20AAA200AC17E2 /* CloudKitHelper.swift in Sources */,
 				E4E8216C1B1FB3920096F22D /* Disciplina.swift in Sources */,
 				E4D528861B1E9176009859D8 /* ViewController.swift in Sources */,
+				A19285881B20FCA900AC17E2 /* Calendario.swift in Sources */,
 				E4E8216A1B1FB3920096F22D /* Trabalho.swift in Sources */,
 				E4E8216F1B2072DB0096F22D /* DisciplinasViewController.swift in Sources */,
 				E4E821681B1FB3920096F22D /* Avaliacao.swift in Sources */,
+				A19285801B20A80100AC17E2 /* AvaliacaoCloud.swift in Sources */,
+				A19285861B20D57E00AC17E2 /* InformacaoUsuario.swift in Sources */,
+				A19285821B20A8C000AC17E2 /* TarefaCloud.swift in Sources */,
+				A192858A1B20FD7500AC17E2 /* OrganizaData.swift in Sources */,
 				E4D528811B1E9176009859D8 /* AppDelegate.swift in Sources */,
 				E4D528841B1E9176009859D8 /* Homework.xcdatamodeld in Sources */,
 			);
@@ -390,9 +438,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Homework/Homework.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Homework/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -400,9 +452,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Homework/Homework.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Homework/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

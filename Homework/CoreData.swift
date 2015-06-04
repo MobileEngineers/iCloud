@@ -11,20 +11,20 @@ import CoreData
 
 class CoreData: NSObject {
     
-    class var sharedInstance : CoreData {
-        struct Static {
-            static var onceToken : dispatch_once_t = 0
-            static var instance : CoreData? = nil
-        }
-        dispatch_once(&Static.onceToken) {
-            Static.instance = CoreData()
-        }
+    class var sharedInstance : CoreData
+        {
+            struct Static
+            {
+                static var onceToken : dispatch_once_t = 0
+                static var instance : CoreData? = nil
+            }
+        dispatch_once(&Static.onceToken)
+            {       Static.instance = CoreData()        }
         return Static.instance!
-    }
+        }
     
-    private override init() {
-        super.init()
-    }
+    private override init()
+    {       super.init()        }
     
     // MARK: - Core Data stack
     
