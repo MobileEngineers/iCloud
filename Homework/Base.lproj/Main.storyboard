@@ -365,7 +365,7 @@
         <scene sceneID="h2l-ff-KSw">
             <objects>
                 <navigationController title="Disciplinas" id="Qlb-BE-XC6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cyV-4t-EDf"/>
+                    <tabBarItem key="tabBarItem" title="Homework" image="bookmark" id="cyV-4t-EDf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gpd-j8-qWJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -702,4 +702,7 @@
             <point key="canvasLocation" x="28" y="104"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bookmark" width="24" height="24"/>
+    </resources>
 </document>
