@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Avaliacao" representedClassName="PRODUCT_MODULE_NAME.Avaliacao" syncable="YES">
+    <entity name="Avaliacao" representedClassName="Homework.Avaliacao" syncable="YES">
         <attribute name="check" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="data" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="materia" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,12 +8,12 @@
         <attribute name="nota" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="disciplina" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Disciplina" inverseName="avaliacoes" inverseEntity="Disciplina" syncable="YES"/>
     </entity>
-    <entity name="Disciplina" representedClassName="PRODUCT_MODULE_NAME.Disciplina" syncable="YES">
+    <entity name="Disciplina" representedClassName="Homework.Disciplina" syncable="YES">
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="avaliacoes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Avaliacao" inverseName="disciplina" inverseEntity="Avaliacao" syncable="YES"/>
         <relationship name="trabalhos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Trabalho" inverseName="disciplina" inverseEntity="Trabalho" syncable="YES"/>
     </entity>
-    <entity name="Trabalho" representedClassName="PRODUCT_MODULE_NAME.Trabalho" syncable="YES">
+    <entity name="Trabalho" representedClassName="Homework.Trabalho" syncable="YES">
         <attribute name="check" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="data" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>

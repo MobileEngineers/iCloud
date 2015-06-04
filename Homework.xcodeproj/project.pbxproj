@@ -18,6 +18,7 @@
 		E4E821681B1FB3920096F22D /* Avaliacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E821671B1FB3920096F22D /* Avaliacao.swift */; };
 		E4E8216A1B1FB3920096F22D /* Trabalho.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E821691B1FB3920096F22D /* Trabalho.swift */; };
 		E4E8216C1B1FB3920096F22D /* Disciplina.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E8216B1B1FB3920096F22D /* Disciplina.swift */; };
+		E4E8216F1B2072DB0096F22D /* DisciplinasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E8216E1B2072DB0096F22D /* DisciplinasViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		E4E821671B1FB3920096F22D /* Avaliacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avaliacao.swift; sourceTree = "<group>"; };
 		E4E821691B1FB3920096F22D /* Trabalho.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trabalho.swift; sourceTree = "<group>"; };
 		E4E8216B1B1FB3920096F22D /* Disciplina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disciplina.swift; sourceTree = "<group>"; };
+		E4E8216E1B2072DB0096F22D /* DisciplinasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinasViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		E4D5287D1B1E9176009859D8 /* Homework */ = {
 			isa = PBXGroup;
 			children = (
+				E4E8216D1B20728B0096F22D /* Navigation 1 */,
 				E4E821661B1FB19B0096F22D /* Entidades */,
 				E4D528A61B1E93FC009859D8 /* CoreData */,
 				E4D528801B1E9176009859D8 /* AppDelegate.swift */,
@@ -141,6 +144,14 @@
 				E4E821671B1FB3920096F22D /* Avaliacao.swift */,
 			);
 			name = Entidades;
+			sourceTree = "<group>";
+		};
+		E4E8216D1B20728B0096F22D /* Navigation 1 */ = {
+			isa = PBXGroup;
+			children = (
+				E4E8216E1B2072DB0096F22D /* DisciplinasViewController.swift */,
+			);
+			name = "Navigation 1";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +258,7 @@
 				E4E8216C1B1FB3920096F22D /* Disciplina.swift in Sources */,
 				E4D528861B1E9176009859D8 /* ViewController.swift in Sources */,
 				E4E8216A1B1FB3920096F22D /* Trabalho.swift in Sources */,
+				E4E8216F1B2072DB0096F22D /* DisciplinasViewController.swift in Sources */,
 				E4E821681B1FB3920096F22D /* Avaliacao.swift in Sources */,
 				E4D528811B1E9176009859D8 /* AppDelegate.swift in Sources */,
 				E4D528841B1E9176009859D8 /* Homework.xcdatamodeld in Sources */,
