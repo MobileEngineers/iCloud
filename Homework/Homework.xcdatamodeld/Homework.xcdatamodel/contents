@@ -22,8 +22,8 @@
         <relationship name="disciplina" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Disciplina" inverseName="trabalhos" inverseEntity="Disciplina" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Avaliacao" positionX="171" positionY="-90" width="128" height="135"/>
         <element name="Disciplina" positionX="-63" positionY="-18" width="128" height="88"/>
-        <element name="Avaliacao" positionX="171" positionY="-90" width="128" height="133"/>
         <element name="Trabalho" positionX="171" positionY="72" width="128" height="133"/>
     </elements>
 </model>

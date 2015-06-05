@@ -14,7 +14,8 @@ class DisciplinasViewController: UITableViewController {
     var disciplinas: NSArray!
     var inputTextField: UITextField?
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         var request = NSFetchRequest(entityName: "Disciplina")
         request.returnsObjectsAsFaults = false
@@ -22,40 +23,47 @@ class DisciplinasViewController: UITableViewController {
         disciplinas = CoreData.sharedInstance.managedObjectContext!.executeFetchRequest(request, error: nil)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool)
+    {
         var request = NSFetchRequest(entityName: "Disciplina")
         request.returnsObjectsAsFaults = false
         
         disciplinas = CoreData.sharedInstance.managedObjectContext!.executeFetchRequest(request, error: nil)
     }
     
-    @IBAction func addDisciplina(sender: AnyObject) {
+    @IBAction func addDisciplina(sender: AnyObject)
+    {
         let cadastro = UIAlertController(title: "Nova disciplina", message: "Teve uma ideia?", preferredStyle: .Alert)
         
-        let salvar: UIAlertAction = UIAlertAction(title: "Salvar", style: .Default) { action -> Void in
-            self.novaDisciplina(self.inputTextField!.text)
-            cadastro.dismissViewControllerAnimated(true, completion: nil)
-            self.tableView.reloadData()
-        }
+        let salvar: UIAlertAction = UIAlertAction(title: "Salvar", style: .Default)
+            { action -> Void in
+                self.novaDisciplina(self.inputTextField!.text)
+                cadastro.dismissViewControllerAnimated(true, completion: nil)
+                self.tableView.reloadData()
+            }
+        
         cadastro.addAction(salvar)
         
-        cadastro.addTextFieldWithConfigurationHandler { textField -> Void in
-            textField.textColor = UIColor.blackColor()
-            textField.layer.cornerRadius = 2
-            textField.placeholder = "Nome do projeto"
-            textField.autocapitalizationType = UITextAutocapitalizationType.Words
-            self.inputTextField = textField
-        }
+        cadastro.addTextFieldWithConfigurationHandler
+            {
+                textField -> Void in
+                textField.textColor = UIColor.blackColor()
+                textField.layer.cornerRadius = 2
+                textField.placeholder = "Nome do projeto"
+                textField.autocapitalizationType = UITextAutocapitalizationType.Words
+                self.inputTextField = textField
+            }
         
-        let cancelar: UIAlertAction = UIAlertAction(title: "Cancelar", style: .Cancel) { action -> Void in
-            cadastro.dismissViewControllerAnimated(true, completion: nil)
-        }
+        let cancelar: UIAlertAction = UIAlertAction(title: "Cancelar", style: .Cancel)
+            {   action -> Void in cadastro.dismissViewControllerAnimated(true, completion: nil)       }
+
         cadastro.addAction(cancelar)
         
         self.presentViewController(cadastro, animated: true, completion: nil)
     }
     
-    func novaDisciplina(nome: String) {
+    func novaDisciplina(nome: String)
+    {
         var newProjeto = NSEntityDescription.insertNewObjectForEntityForName("Disciplina", inManagedObjectContext: CoreData.sharedInstance.managedObjectContext!) as! NSManagedObject
         newProjeto.setValue(nome, forKey: "nome")
         
@@ -64,27 +72,20 @@ class DisciplinasViewController: UITableViewController {
         CoreData.sharedInstance.managedObjectContext!.save(nil)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    override func didReceiveMemoryWarning()
+    {        super.didReceiveMemoryWarning()    }
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 1
-    }
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {       return 1        }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return disciplinas.count
-    }
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {       return disciplinas.count        }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
         let cell = tableView.dequeueReusableCellWithIdentifier("disciplina", forIndexPath: indexPath) as! UITableViewCell
         
         let disciplina = disciplinas.objectAtIndex(indexPath.row) as! Disciplina
