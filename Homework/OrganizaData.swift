@@ -10,7 +10,7 @@ import Foundation
 import CloudKit
 
 class OrganizaData {
-    
+/*
     private var dias = [NSDate]()
     private var tarefas = [TarefaCloud]()
     private var diasEProvas = [NSDate : [String]]()
@@ -79,5 +79,5 @@ class OrganizaData {
         }
         return nil
     }
-   
+ */  
 }

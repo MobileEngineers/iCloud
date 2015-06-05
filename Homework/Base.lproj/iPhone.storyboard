@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Disciplinas-->
+        <!--Homework-->
         <scene sceneID="TYK-c4-Qka">
             <objects>
                 <tableViewController id="sbw-Jz-Fg5" customClass="DisciplinasViewController" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,7 +37,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Disciplinas" id="3DM-op-WG5">
+                    <navigationItem key="navigationItem" title="Homework" id="3DM-op-WG5">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="7xs-EB-p6j">
                             <connections>
                                 <action selector="addDisciplina:" destination="sbw-Jz-Fg5" id="vqm-zA-7dg"/>
@@ -399,13 +399,13 @@
                             <outlet property="delegate" destination="0bl-1H-8B5" id="Xam-6R-uSp"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="htB-lt-pdz"/>
+                    <tabBarItem key="tabBarItem" title="Calendário" image="calendar" id="htB-lt-pdz"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOr-ZK-J5W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28" y="983"/>
         </scene>
-        <!--Relatorio / Disciplinas-->
+        <!--Relatório-->
         <scene sceneID="OPD-gr-r3P">
             <objects>
                 <tableViewController id="Xng-RS-d3x" customClass="RelatoriosTableView" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
@@ -429,7 +429,7 @@
                             <outlet property="delegate" destination="Xng-RS-d3x" id="PGB-bV-hyg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Relatorio / Disciplinas" id="GK6-as-eSe"/>
+                    <navigationItem key="navigationItem" title="Relatório" id="GK6-as-eSe"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BZ3-Jm-h7L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -664,11 +664,11 @@
             </objects>
             <point key="canvasLocation" x="833" y="3262"/>
         </scene>
-        <!--Item-->
+        <!--Relatório-->
         <scene sceneID="be8-KF-mPc">
             <objects>
                 <navigationController id="rj4-oD-05R" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="UYi-0N-MUs"/>
+                    <tabBarItem key="tabBarItem" title="Relatório" image="report" id="UYi-0N-MUs"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5yr-g3-mPj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -704,5 +704,7 @@
     </scenes>
     <resources>
         <image name="bookmark" width="24" height="24"/>
+        <image name="calendar" width="24" height="24"/>
+        <image name="report" width="24" height="24"/>
     </resources>
 </document>

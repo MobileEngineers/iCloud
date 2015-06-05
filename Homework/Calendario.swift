@@ -8,8 +8,8 @@
 
 import UIKit
 
-class Calendario: UITableViewController, CloudKitHelperDelegate {
-    
+class Calendario: UITableViewController/*, CloudKitHelperDelegate */ {
+/*
     let model = CloudKitHelper.sharedInstance()
     let organiza = OrganizaData()
     
@@ -68,5 +68,5 @@ class Calendario: UITableViewController, CloudKitHelperDelegate {
     {
         
     }
-    
+*/
 }

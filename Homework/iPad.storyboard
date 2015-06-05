@@ -399,7 +399,7 @@
                             <outlet property="delegate" destination="DAW-gn-ksg" id="raF-aW-rif"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="eF8-Vb-y7x"/>
+                    <tabBarItem key="tabBarItem" title="Calendário" image="calendar" id="eF8-Vb-y7x"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pRf-fK-ud5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -664,11 +664,11 @@
             </objects>
             <point key="canvasLocation" x="833" y="3262"/>
         </scene>
-        <!--Item-->
+        <!--Relatório-->
         <scene sceneID="b1W-xY-oBK">
             <objects>
                 <navigationController id="NkZ-CK-2xq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YMa-Uc-Htb"/>
+                    <tabBarItem key="tabBarItem" title="Relatório" image="report" id="YMa-Uc-Htb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lqH-ge-cw6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -704,5 +704,7 @@
     </scenes>
     <resources>
         <image name="bookmark" width="24" height="24"/>
+        <image name="calendar" width="24" height="24"/>
+        <image name="report" width="24" height="24"/>
     </resources>
 </document>
