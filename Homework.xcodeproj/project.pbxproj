@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02D8ED311B22347500DD9E1F /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D8ED301B22347500DD9E1F /* iPad.storyboard */; };
+		02D8ED331B22356600DD9E1F /* DisciplinasTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED321B22356600DD9E1F /* DisciplinasTableView.swift */; };
+		02D8ED361B22360900DD9E1F /* SelecionaDisciplinaTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED351B22360900DD9E1F /* SelecionaDisciplinaTableView.swift */; };
+		02D8ED3A1B22367500DD9E1F /* SelecionaProvaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED391B22367500DD9E1F /* SelecionaProvaView.swift */; };
+		02D8ED3C1B2236B400DD9E1F /* SelecionaTarefaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED3B1B2236B400DD9E1F /* SelecionaTarefaView.swift */; };
+		02D8ED3E1B2236E300DD9E1F /* AddProvaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED3D1B2236E300DD9E1F /* AddProvaView.swift */; };
+		02D8ED401B22370600DD9E1F /* AddTarefaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED3F1B22370600DD9E1F /* AddTarefaView.swift */; };
+		02D8ED441B2237E800DD9E1F /* RelatoriosTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED431B2237E800DD9E1F /* RelatoriosTableView.swift */; };
+		02D8ED461B22384200DD9E1F /* SelecionaRelatorioTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED451B22384200DD9E1F /* SelecionaRelatorioTableView.swift */; };
+		02D8ED481B2238A000DD9E1F /* RelatorioProvaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED471B2238A000DD9E1F /* RelatorioProvaView.swift */; };
+		02D8ED4A1B2238D600DD9E1F /* RelatorioTarefaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED491B2238D600DD9E1F /* RelatorioTarefaView.swift */; };
 		A19285791B20918000AC17E2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19285781B20918000AC17E2 /* CloudKit.framework */; };
 		A192857E1B20A73C00AC17E2 /* DisciplinaCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192857D1B20A73C00AC17E2 /* DisciplinaCloud.swift */; };
 		A19285801B20A80100AC17E2 /* AvaliacaoCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192857F1B20A80100AC17E2 /* AvaliacaoCloud.swift */; };
@@ -18,7 +29,7 @@
 		E4D528811B1E9176009859D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D528801B1E9176009859D8 /* AppDelegate.swift */; };
 		E4D528841B1E9176009859D8 /* Homework.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E4D528821B1E9176009859D8 /* Homework.xcdatamodeld */; };
 		E4D528861B1E9176009859D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D528851B1E9176009859D8 /* ViewController.swift */; };
-		E4D528891B1E9176009859D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D528871B1E9176009859D8 /* Main.storyboard */; };
+		E4D528891B1E9176009859D8 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D528871B1E9176009859D8 /* iPhone.storyboard */; };
 		E4D5288B1B1E9176009859D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D5288A1B1E9176009859D8 /* Images.xcassets */; };
 		E4D5288E1B1E9176009859D8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4D5288C1B1E9176009859D8 /* LaunchScreen.xib */; };
 		E4D5289A1B1E9176009859D8 /* HomeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D528991B1E9176009859D8 /* HomeworkTests.swift */; };
@@ -40,6 +51,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02D8ED301B22347500DD9E1F /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
+		02D8ED321B22356600DD9E1F /* DisciplinasTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinasTableView.swift; sourceTree = "<group>"; };
+		02D8ED351B22360900DD9E1F /* SelecionaDisciplinaTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecionaDisciplinaTableView.swift; sourceTree = "<group>"; };
+		02D8ED391B22367500DD9E1F /* SelecionaProvaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecionaProvaView.swift; sourceTree = "<group>"; };
+		02D8ED3B1B2236B400DD9E1F /* SelecionaTarefaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecionaTarefaView.swift; sourceTree = "<group>"; };
+		02D8ED3D1B2236E300DD9E1F /* AddProvaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProvaView.swift; sourceTree = "<group>"; };
+		02D8ED3F1B22370600DD9E1F /* AddTarefaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTarefaView.swift; sourceTree = "<group>"; };
+		02D8ED431B2237E800DD9E1F /* RelatoriosTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatoriosTableView.swift; sourceTree = "<group>"; };
+		02D8ED451B22384200DD9E1F /* SelecionaRelatorioTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecionaRelatorioTableView.swift; sourceTree = "<group>"; };
+		02D8ED471B2238A000DD9E1F /* RelatorioProvaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatorioProvaView.swift; sourceTree = "<group>"; };
+		02D8ED491B2238D600DD9E1F /* RelatorioTarefaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatorioTarefaView.swift; sourceTree = "<group>"; };
 		A19285771B20915000AC17E2 /* Homework.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Homework.entitlements; sourceTree = "<group>"; };
 		A19285781B20918000AC17E2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		A192857D1B20A73C00AC17E2 /* DisciplinaCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinaCloud.swift; sourceTree = "<group>"; };
@@ -54,7 +76,7 @@
 		E4D528801B1E9176009859D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4D528831B1E9176009859D8 /* Homework.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Homework.xcdatamodel; sourceTree = "<group>"; };
 		E4D528851B1E9176009859D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E4D528881B1E9176009859D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E4D528881B1E9176009859D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iPhone.storyboard; sourceTree = "<group>"; };
 		E4D5288A1B1E9176009859D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E4D5288D1B1E9176009859D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E4D528931B1E9176009859D8 /* HomeworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +108,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02D8ED341B2235BD00DD9E1F /* TabBar 1 */ = {
+			isa = PBXGroup;
+			children = (
+				02D8ED321B22356600DD9E1F /* DisciplinasTableView.swift */,
+				02D8ED351B22360900DD9E1F /* SelecionaDisciplinaTableView.swift */,
+				02D8ED3D1B2236E300DD9E1F /* AddProvaView.swift */,
+				02D8ED3F1B22370600DD9E1F /* AddTarefaView.swift */,
+				02D8ED391B22367500DD9E1F /* SelecionaProvaView.swift */,
+				02D8ED3B1B2236B400DD9E1F /* SelecionaTarefaView.swift */,
+			);
+			name = "TabBar 1";
+			sourceTree = "<group>";
+		};
+		02D8ED411B22372A00DD9E1F /* TabBar 2 Calendario */ = {
+			isa = PBXGroup;
+			children = (
+				A19285871B20FCA900AC17E2 /* Calendario.swift */,
+			);
+			name = "TabBar 2 Calendario";
+			sourceTree = "<group>";
+		};
+		02D8ED421B22378C00DD9E1F /* TabBar 3 Relatorios */ = {
+			isa = PBXGroup;
+			children = (
+				02D8ED431B2237E800DD9E1F /* RelatoriosTableView.swift */,
+				02D8ED451B22384200DD9E1F /* SelecionaRelatorioTableView.swift */,
+				02D8ED471B2238A000DD9E1F /* RelatorioProvaView.swift */,
+				02D8ED491B2238D600DD9E1F /* RelatorioTarefaView.swift */,
+			);
+			name = "TabBar 3 Relatorios";
+			sourceTree = "<group>";
+		};
 		A192857A1B20A60600AC17E2 /* CloudKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,18 +174,21 @@
 		E4D5287D1B1E9176009859D8 /* Homework */ = {
 			isa = PBXGroup;
 			children = (
-				A19285771B20915000AC17E2 /* Homework.entitlements */,
+				02D8ED341B2235BD00DD9E1F /* TabBar 1 */,
+				02D8ED411B22372A00DD9E1F /* TabBar 2 Calendario */,
+				02D8ED421B22378C00DD9E1F /* TabBar 3 Relatorios */,
 				A192857A1B20A60600AC17E2 /* CloudKit */,
 				E4E8216D1B20728B0096F22D /* Navigation 1 */,
 				E4E821661B1FB19B0096F22D /* Entidades */,
 				E4D528A61B1E93FC009859D8 /* CoreData */,
 				E4D528801B1E9176009859D8 /* AppDelegate.swift */,
-				A19285871B20FCA900AC17E2 /* Calendario.swift */,
 				A19285891B20FD7500AC17E2 /* OrganizaData.swift */,
 				E4D528851B1E9176009859D8 /* ViewController.swift */,
-				E4D528871B1E9176009859D8 /* Main.storyboard */,
+				E4D528871B1E9176009859D8 /* iPhone.storyboard */,
+				02D8ED301B22347500DD9E1F /* iPad.storyboard */,
 				E4D5288A1B1E9176009859D8 /* Images.xcassets */,
 				E4D5288C1B1E9176009859D8 /* LaunchScreen.xib */,
+				A19285771B20915000AC17E2 /* Homework.entitlements */,
 				E4D5287E1B1E9176009859D8 /* Supporting Files */,
 			);
 			path = Homework;
@@ -275,7 +332,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4D528891B1E9176009859D8 /* Main.storyboard in Resources */,
+				02D8ED311B22347500DD9E1F /* iPad.storyboard in Resources */,
+				E4D528891B1E9176009859D8 /* iPhone.storyboard in Resources */,
 				E4D5288E1B1E9176009859D8 /* LaunchScreen.xib in Resources */,
 				E4D5288B1B1E9176009859D8 /* Images.xcassets in Resources */,
 			);
@@ -298,15 +356,25 @@
 				E4D528A81B1E9423009859D8 /* CoreData.swift in Sources */,
 				A192857E1B20A73C00AC17E2 /* DisciplinaCloud.swift in Sources */,
 				A19285841B20AAA200AC17E2 /* CloudKitHelper.swift in Sources */,
+				02D8ED441B2237E800DD9E1F /* RelatoriosTableView.swift in Sources */,
 				E4E8216C1B1FB3920096F22D /* Disciplina.swift in Sources */,
 				E4D528861B1E9176009859D8 /* ViewController.swift in Sources */,
 				A19285881B20FCA900AC17E2 /* Calendario.swift in Sources */,
+				02D8ED481B2238A000DD9E1F /* RelatorioProvaView.swift in Sources */,
 				E4E8216A1B1FB3920096F22D /* Trabalho.swift in Sources */,
 				E4E8216F1B2072DB0096F22D /* DisciplinasViewController.swift in Sources */,
 				E4E821681B1FB3920096F22D /* Avaliacao.swift in Sources */,
+				02D8ED361B22360900DD9E1F /* SelecionaDisciplinaTableView.swift in Sources */,
+				02D8ED461B22384200DD9E1F /* SelecionaRelatorioTableView.swift in Sources */,
+				02D8ED401B22370600DD9E1F /* AddTarefaView.swift in Sources */,
 				A19285801B20A80100AC17E2 /* AvaliacaoCloud.swift in Sources */,
+				02D8ED3A1B22367500DD9E1F /* SelecionaProvaView.swift in Sources */,
 				A19285861B20D57E00AC17E2 /* InformacaoUsuario.swift in Sources */,
+				02D8ED3E1B2236E300DD9E1F /* AddProvaView.swift in Sources */,
+				02D8ED331B22356600DD9E1F /* DisciplinasTableView.swift in Sources */,
 				A19285821B20A8C000AC17E2 /* TarefaCloud.swift in Sources */,
+				02D8ED3C1B2236B400DD9E1F /* SelecionaTarefaView.swift in Sources */,
+				02D8ED4A1B2238D600DD9E1F /* RelatorioTarefaView.swift in Sources */,
 				A192858A1B20FD7500AC17E2 /* OrganizaData.swift in Sources */,
 				E4D528811B1E9176009859D8 /* AppDelegate.swift in Sources */,
 				E4D528841B1E9176009859D8 /* Homework.xcdatamodeld in Sources */,
@@ -332,12 +400,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E4D528871B1E9176009859D8 /* Main.storyboard */ = {
+		E4D528871B1E9176009859D8 /* iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E4D528881B1E9176009859D8 /* Base */,
 			);
-			name = Main.storyboard;
+			name = iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		E4D5288C1B1E9176009859D8 /* LaunchScreen.xib */ = {

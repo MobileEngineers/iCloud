@@ -11,7 +11,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="50" sectionHeaderHeight="10" sectionFooterHeight="10" id="Y9k-om-Ogk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="disciplina" textLabel="s3j-3M-d2e" rowHeight="50" style="IBUITableViewCellStyleDefault" id="xDN-9J-Mo6">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -21,7 +21,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s3j-3M-d2e">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -53,7 +53,7 @@
         <!--DisciplinaX-->
         <scene sceneID="Lqx-SR-j4R">
             <objects>
-                <tableViewController id="Fb9-Ah-xvO" sceneMemberID="viewController">
+                <tableViewController id="Fb9-Ah-xvO" customClass="SelecionaDisciplinaTableView" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eHK-ED-sXC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,7 +169,7 @@
         <!--Add Prova-->
         <scene sceneID="kew-aP-MAX">
             <objects>
-                <viewController title="Add Prova" id="VAf-ic-9kg" sceneMemberID="viewController">
+                <viewController title="Add Prova" id="VAf-ic-9kg" customClass="AddProvaView" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9jP-vO-eH4"/>
                         <viewControllerLayoutGuide type="bottom" id="hKn-E1-HLs"/>
@@ -223,7 +223,7 @@
         <!--Add Tarefa-->
         <scene sceneID="uga-WB-PJJ">
             <objects>
-                <viewController title="Add Tarefa" id="GrI-QY-ZcE" sceneMemberID="viewController">
+                <viewController title="Add Tarefa" id="GrI-QY-ZcE" customClass="AddTarefaView" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FTn-tC-D1A"/>
                         <viewControllerLayoutGuide type="bottom" id="8vx-98-1FG"/>
@@ -276,7 +276,7 @@
         <!--TarefaX-->
         <scene sceneID="39L-cB-oUG">
             <objects>
-                <viewController id="w1i-Nc-QNE" sceneMemberID="viewController">
+                <viewController id="w1i-Nc-QNE" customClass="SelecionaTarefaView" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="csd-cN-vQ8"/>
                         <viewControllerLayoutGuide type="bottom" id="1AH-uj-lkE"/>
@@ -320,7 +320,7 @@
         <!--ProvaX-->
         <scene sceneID="MCN-Az-SDn">
             <objects>
-                <viewController id="OdR-zM-YZX" sceneMemberID="viewController">
+                <viewController id="OdR-zM-YZX" customClass="SelecionaProvaView" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dWp-YK-K5h"/>
                         <viewControllerLayoutGuide type="bottom" id="3px-py-qdD"/>
@@ -381,7 +381,7 @@
         <!--Calendario-->
         <scene sceneID="Kb0-Zn-EPr">
             <objects>
-                <tableViewController title="Calendario" id="0bl-1H-8B5" sceneMemberID="viewController">
+                <tableViewController title="Calendario" id="0bl-1H-8B5" customClass="Calendario" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0AJ-e5-6jg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -408,7 +408,7 @@
         <!--Relatorio / Disciplinas-->
         <scene sceneID="OPD-gr-r3P">
             <objects>
-                <tableViewController id="Xng-RS-d3x" sceneMemberID="viewController">
+                <tableViewController id="Xng-RS-d3x" customClass="RelatoriosTableView" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="CQ2-pB-9fW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -438,7 +438,7 @@
         <!--DisciplinaX-->
         <scene sceneID="kdv-DI-bs1">
             <objects>
-                <tableViewController id="nxE-XM-Rsz" sceneMemberID="viewController">
+                <tableViewController id="nxE-XM-Rsz" customClass="SelecionaRelatorioTableView" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Cci-9g-hpT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -493,7 +493,7 @@
         <!--TarefaX-->
         <scene sceneID="1B1-P5-Ce7">
             <objects>
-                <viewController id="eaN-PI-d8v" sceneMemberID="viewController">
+                <viewController id="eaN-PI-d8v" customClass="RelatorioTarefaView" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L12-1Z-85h"/>
                         <viewControllerLayoutGuide type="bottom" id="MAg-jY-WqH"/>
@@ -580,7 +580,7 @@
         <!--ProvaX-->
         <scene sceneID="Qeo-xm-SIj">
             <objects>
-                <viewController id="YWE-jj-tRJ" sceneMemberID="viewController">
+                <viewController id="YWE-jj-tRJ" customClass="RelatorioProvaView" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KZn-A4-tth"/>
                         <viewControllerLayoutGuide type="bottom" id="SnQ-qY-734"/>
