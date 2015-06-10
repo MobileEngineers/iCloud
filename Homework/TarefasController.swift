@@ -25,10 +25,6 @@ class TarefasController: UITableViewController, DetalhesDelegate {
         
     }
     
-    override func viewWillAppear(animated: Bool) {
-        self.tableView.reloadData()
-    }
-    
     func adicionaProva(nome: String, descricao: String, data: NSDate) {
         let novaProva = NSEntityDescription.insertNewObjectForEntityForName("Avaliacao", inManagedObjectContext: CoreData.sharedInstance.managedObjectContext!) as! Avaliacao
         novaProva.nome = nome

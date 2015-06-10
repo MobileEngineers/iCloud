@@ -264,7 +264,9 @@
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="s7I-nK-hiR">
                             <connections>
                                 <action selector="addTarefa:" destination="Fb9-Ah-xvO" id="i15-ww-1l7"/>
-                                <segue destination="wnT-9d-6Rf" kind="show" id="jqm-Ya-z8Y"/>
+                                <segue destination="wnT-9d-6Rf" kind="popoverPresentation" popoverAnchorBarButtonItem="s7I-nK-hiR" id="jqm-Ya-z8Y">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
