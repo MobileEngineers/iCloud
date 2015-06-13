@@ -7,17 +7,28 @@
 //
 
 import UIKit
+import CoreData
 
 class RelatoriosTableView: UITableViewController {
+    
+    var disciplinas: NSArray!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        var request = NSFetchRequest(entityName: "Disciplina")
+        request.returnsObjectsAsFaults = false
+        
+        disciplinas = CoreData.sharedInstance.managedObjectContext!.executeFetchRequest(request, error: nil)
+        
+    }
+    
+    override func viewWillAppear(animated: Bool)
+    {
+        var request = NSFetchRequest(entityName: "Disciplina")
+        request.returnsObjectsAsFaults = false
+        
+        disciplinas = CoreData.sharedInstance.managedObjectContext!.executeFetchRequest(request, error: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,26 +39,25 @@ class RelatoriosTableView: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 0
+        return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 0
+        return disciplinas.count
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Suas Disciplinas"
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-
-        // Configure the cell...
-
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("disciplina", forIndexPath: indexPath) as! UITableViewCell
+        let disciplina = disciplinas.objectAtIndex(indexPath.row) as! Disciplina
+        cell.textLabel?.text = disciplina.nome
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -84,14 +94,18 @@ class RelatoriosTableView: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        
+        let indexPath = tableView.indexPathForSelectedRow()
+        let viewController = segue.destinationViewController as! SelecionaRelatorioTableView
+        
+        viewController.disciplina = disciplinas.objectAtIndex(indexPath!.row) as! Disciplina
+        
     }
-    */
+    
 
 }

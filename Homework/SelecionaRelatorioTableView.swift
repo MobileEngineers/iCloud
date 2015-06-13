@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import CoreData
 
 class SelecionaRelatorioTableView: UITableViewController {
+    
+    var disciplina: Disciplina!
+    var trabalhos: NSArray!
+    var provas: NSArray!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        provas = disciplina.avaliacoes.allObjects
+        trabalhos = disciplina.trabalhos.allObjects
+        
+        self.navigationItem.title = disciplina.nome
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,26 +33,47 @@ class SelecionaRelatorioTableView: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 0
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 0
+        if (section == 0) {
+            return provas.count
+        }
+        if (section == 1) {
+            return trabalhos.count
+        }
+        return 1
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("tarefa", forIndexPath: indexPath) as! UITableViewCell
+        
+        if indexPath.section == 0 {
+            
+            let prova = provas.objectAtIndex(indexPath.row) as! Avaliacao
+            cell.textLabel?.text = prova.nome
+            
+        }
+        if indexPath.section == 1 {
+            
+            let trabalho = trabalhos.objectAtIndex(indexPath.row) as! Trabalho
+            cell.textLabel?.text = trabalho.nome
+            
+        }
+        
         return cell
     }
-    */
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Avaliações"
+        }
+        if section == 1 {
+            return "Trabalhos"
+        }
+        return ""
+    }
 
     /*
     // Override to support conditional editing of the table view.
