@@ -18,11 +18,13 @@ class TarefasController: UITableViewController, DetalhesDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         provas = disciplina.avaliacoes.allObjects
         trabalhos = disciplina.trabalhos.allObjects
         
         self.tableView.reloadData()
-        
     }
     
     func adicionaProva(nome: String, descricao: String, data: NSDate) {
