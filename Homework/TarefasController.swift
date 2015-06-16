@@ -194,8 +194,10 @@ class TarefasController: UITableViewController, DetalhesDelegate {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let viewController = segue.destinationViewController as! DetalhesController
-        viewController.delegate = self
+        if segue.identifier == "cadastro" {
+            let viewController = segue.destinationViewController as! DetalhesController
+            viewController.delegate = self
+        }
         
     }
     

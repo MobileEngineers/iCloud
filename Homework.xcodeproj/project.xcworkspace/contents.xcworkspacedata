@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../Homework/NotasController.swift">
+   </FileRef>
+   <FileRef
       location = "self:Homework.xcodeproj">
    </FileRef>
 </Workspace>

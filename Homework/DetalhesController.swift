@@ -16,7 +16,7 @@ protocol DetalhesDelegate {
     
 }
 
-class DetalhesController: UITableViewController, UITextFieldDelegate {
+class DetalhesController: UITableViewController, UITextFieldDelegate, UITextViewDelegate {
     
     var delegate: DetalhesDelegate!
 
@@ -32,6 +32,7 @@ class DetalhesController: UITableViewController, UITextFieldDelegate {
         datePicker.minimumDate = NSDate()
         salvar.enabled = false
         textField.delegate = self
+        textView.delegate = self
         
     }
     
@@ -42,6 +43,15 @@ class DetalhesController: UITableViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        textView.resignFirstResponder()
     }
 
     // MARK: - Table view data source
@@ -87,6 +97,9 @@ class DetalhesController: UITableViewController, UITextFieldDelegate {
             self.presentViewController(cadastro, animated: true, completion: nil)
         }
         
+    }
+    @IBAction func cancelar(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
