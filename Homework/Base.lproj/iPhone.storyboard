@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lib-Or-fIK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lib-Or-fIK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -360,7 +360,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s1C-J0-Q8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1508" y="3214"/>
+            <point key="canvasLocation" x="-1139" y="3214"/>
         </scene>
         <!--Tarefas-->
         <scene sceneID="Lqx-SR-j4R">
@@ -372,7 +372,7 @@
                         <animations/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tarefa" textLabel="h0Q-bP-1Xo" style="IBUITableViewCellStyleDefault" id="lyO-FI-HV0">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="tarefa" textLabel="h0Q-bP-1Xo" style="IBUITableViewCellStyleDefault" id="lyO-FI-HV0">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lyO-FI-HV0" id="Wra-J5-FOr">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -545,17 +545,17 @@
             </objects>
             <point key="canvasLocation" x="1186" y="2487"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Relatorio Prova Tarefa Table View-->
         <scene sceneID="3x6-zK-M7m">
             <objects>
-                <tableViewController id="yQX-av-r1I" sceneMemberID="viewController">
+                <tableViewController id="yQX-av-r1I" customClass="RelatorioProvaTarefaTableView" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="bC4-lh-hdY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Nome da tarefa" id="6Tq-Ro-Aga">
+                            <tableViewSection headerTitle="Nome" id="6Tq-Ro-Aga">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="oYC-8c-c5d">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -625,7 +625,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UBd-Vi-dR6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="941" y="3138"/>
+            <point key="canvasLocation" x="1186" y="3214"/>
         </scene>
         <!--Relatório-->
         <scene sceneID="be8-KF-mPc">
