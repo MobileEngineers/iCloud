@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021B2A591B31337A002ECB92 /* RelatorioProvaTarefaTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B2A581B31337A002ECB92 /* RelatorioProvaTarefaTableView.swift */; };
 		02D8ED311B22347500DD9E1F /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D8ED301B22347500DD9E1F /* iPad.storyboard */; };
 		02D8ED3A1B22367500DD9E1F /* SelecionaProvaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED391B22367500DD9E1F /* SelecionaProvaView.swift */; };
 		02D8ED3C1B2236B400DD9E1F /* TarefasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED3B1B2236B400DD9E1F /* TarefasController.swift */; };
 		02D8ED441B2237E800DD9E1F /* RelatoriosTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED431B2237E800DD9E1F /* RelatoriosTableView.swift */; };
 		02D8ED461B22384200DD9E1F /* SelecionaRelatorioTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED451B22384200DD9E1F /* SelecionaRelatorioTableView.swift */; };
-		02D8ED481B2238A000DD9E1F /* RelatorioProvaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED471B2238A000DD9E1F /* RelatorioProvaView.swift */; };
-		02D8ED4A1B2238D600DD9E1F /* RelatorioTarefaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED491B2238D600DD9E1F /* RelatorioTarefaView.swift */; };
 		A12889901B311EE0007EF84D /* AvaliacaoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A128898F1B311EE0007EF84D /* AvaliacaoFactory.swift */; };
 		A12889921B311EF4007EF84D /* DisciplinaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12889911B311EF4007EF84D /* DisciplinaFactory.swift */; };
 		A12889941B311EFF007EF84D /* TarefaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12889931B311EFF007EF84D /* TarefaFactory.swift */; };
@@ -53,13 +52,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021B2A581B31337A002ECB92 /* RelatorioProvaTarefaTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatorioProvaTarefaTableView.swift; sourceTree = "<group>"; };
 		02D8ED301B22347500DD9E1F /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		02D8ED391B22367500DD9E1F /* SelecionaProvaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecionaProvaView.swift; sourceTree = "<group>"; };
 		02D8ED3B1B2236B400DD9E1F /* TarefasController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarefasController.swift; sourceTree = "<group>"; };
 		02D8ED431B2237E800DD9E1F /* RelatoriosTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatoriosTableView.swift; sourceTree = "<group>"; };
 		02D8ED451B22384200DD9E1F /* SelecionaRelatorioTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecionaRelatorioTableView.swift; sourceTree = "<group>"; };
-		02D8ED471B2238A000DD9E1F /* RelatorioProvaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatorioProvaView.swift; sourceTree = "<group>"; };
-		02D8ED491B2238D600DD9E1F /* RelatorioTarefaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatorioTarefaView.swift; sourceTree = "<group>"; };
 		A128898F1B311EE0007EF84D /* AvaliacaoFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacaoFactory.swift; sourceTree = "<group>"; };
 		A12889911B311EF4007EF84D /* DisciplinaFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinaFactory.swift; sourceTree = "<group>"; };
 		A12889931B311EFF007EF84D /* TarefaFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarefaFactory.swift; sourceTree = "<group>"; };
@@ -132,8 +130,7 @@
 			children = (
 				02D8ED431B2237E800DD9E1F /* RelatoriosTableView.swift */,
 				02D8ED451B22384200DD9E1F /* SelecionaRelatorioTableView.swift */,
-				02D8ED471B2238A000DD9E1F /* RelatorioProvaView.swift */,
-				02D8ED491B2238D600DD9E1F /* RelatorioTarefaView.swift */,
+				021B2A581B31337A002ECB92 /* RelatorioProvaTarefaTableView.swift */,
 			);
 			name = "TabBar 3 Relatorios";
 			sourceTree = "<group>";
@@ -371,12 +368,12 @@
 				A12889921B311EF4007EF84D /* DisciplinaFactory.swift in Sources */,
 				A12889941B311EFF007EF84D /* TarefaFactory.swift in Sources */,
 				A19285841B20AAA200AC17E2 /* CloudKitHelper.swift in Sources */,
+				021B2A591B31337A002ECB92 /* RelatorioProvaTarefaTableView.swift in Sources */,
 				A12889981B311F36007EF84D /* DisciplinaManager.swift in Sources */,
 				02D8ED441B2237E800DD9E1F /* RelatoriosTableView.swift in Sources */,
 				E4E8216C1B1FB3920096F22D /* Disciplina.swift in Sources */,
 				E4D528861B1E9176009859D8 /* ViewController.swift in Sources */,
 				A19285881B20FCA900AC17E2 /* Calendario.swift in Sources */,
-				02D8ED481B2238A000DD9E1F /* RelatorioProvaView.swift in Sources */,
 				E4E8216F1B2072DB0096F22D /* DisciplinasViewController.swift in Sources */,
 				02D8ED461B22384200DD9E1F /* SelecionaRelatorioTableView.swift in Sources */,
 				E42D489A1B30FBF300C7B1B5 /* Trabalho.swift in Sources */,
@@ -387,7 +384,6 @@
 				E4D51C0D1B307FAE00DA1E78 /* NotasController.swift in Sources */,
 				02D8ED3C1B2236B400DD9E1F /* TarefasController.swift in Sources */,
 				A12889961B311F2A007EF84D /* AvaliacaoManager.swift in Sources */,
-				02D8ED4A1B2238D600DD9E1F /* RelatorioTarefaView.swift in Sources */,
 				A12889901B311EE0007EF84D /* AvaliacaoFactory.swift in Sources */,
 				A192858A1B20FD7500AC17E2 /* OrganizaData.swift in Sources */,
 				E4D528811B1E9176009859D8 /* AppDelegate.swift in Sources */,
