@@ -110,14 +110,28 @@ class SelecionaRelatorioTableView: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "relatorio" {
+            let viewController = segue.destinationViewController as! RelatorioProvaTarefaTableView            
+            let indexPath = tableView.indexPathForSelectedRow()
+            
+            if indexPath!.section == 0 {
+                let prova = provas.objectAtIndex(indexPath!.row) as! Avaliacao
+                viewController.prova = prova
+            }
+            if indexPath!.section == 1 {
+                let trabalho = trabalhos.objectAtIndex(indexPath!.row) as! Trabalho
+                viewController.trabalho = trabalho
+            }
+        }
+
+        
     }
-    */
+    
 
 }

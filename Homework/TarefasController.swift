@@ -32,6 +32,7 @@ class TarefasController: UITableViewController, DetalhesDelegate {
         novaProva.nome = nome
         novaProva.materia = descricao
         novaProva.data = data
+        novaProva.nota = -1.0
         disciplina.avaliacoes = disciplina.avaliacoes.setByAddingObject(novaProva)
         
         CoreData.sharedInstance.managedObjectContext!.save(nil)
@@ -44,6 +45,7 @@ class TarefasController: UITableViewController, DetalhesDelegate {
         novoTrabalho.nome = nome
         novoTrabalho.descricao = descricao
         novoTrabalho.data = entrega
+        novoTrabalho.nota = -1.0
         disciplina.trabalhos = disciplina.trabalhos.setByAddingObject(novoTrabalho)
         
         CoreData.sharedInstance.managedObjectContext!.save(nil)

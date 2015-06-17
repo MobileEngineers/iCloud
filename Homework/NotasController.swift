@@ -45,7 +45,9 @@ class NotasController: UITableViewController, UITextFieldDelegate {
         
         if segmentedControl.selectedSegmentIndex == 1 {
             let string = NSString(format: "%@", textField.text)
-            let nota = string.doubleValue
+            var nota = string.doubleValue
+            if (nota > 10.0) { nota = 10.0 }
+            if (nota < 0.0)  { nota = 0.0  }
             
             for materia in disciplinas {
                 if materia.nome == disciplina {
