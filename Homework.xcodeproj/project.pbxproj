@@ -14,6 +14,12 @@
 		02D8ED461B22384200DD9E1F /* SelecionaRelatorioTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED451B22384200DD9E1F /* SelecionaRelatorioTableView.swift */; };
 		02D8ED481B2238A000DD9E1F /* RelatorioProvaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED471B2238A000DD9E1F /* RelatorioProvaView.swift */; };
 		02D8ED4A1B2238D600DD9E1F /* RelatorioTarefaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8ED491B2238D600DD9E1F /* RelatorioTarefaView.swift */; };
+		A12889901B311EE0007EF84D /* AvaliacaoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A128898F1B311EE0007EF84D /* AvaliacaoFactory.swift */; };
+		A12889921B311EF4007EF84D /* DisciplinaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12889911B311EF4007EF84D /* DisciplinaFactory.swift */; };
+		A12889941B311EFF007EF84D /* TarefaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12889931B311EFF007EF84D /* TarefaFactory.swift */; };
+		A12889961B311F2A007EF84D /* AvaliacaoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12889951B311F2A007EF84D /* AvaliacaoManager.swift */; };
+		A12889981B311F36007EF84D /* DisciplinaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12889971B311F36007EF84D /* DisciplinaManager.swift */; };
+		A128899A1B311F42007EF84D /* TarefaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12889991B311F42007EF84D /* TarefaManager.swift */; };
 		A192857E1B20A73C00AC17E2 /* DisciplinaCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192857D1B20A73C00AC17E2 /* DisciplinaCloud.swift */; };
 		A19285801B20A80100AC17E2 /* AvaliacaoCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192857F1B20A80100AC17E2 /* AvaliacaoCloud.swift */; };
 		A19285821B20A8C000AC17E2 /* TarefaCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19285811B20A8C000AC17E2 /* TarefaCloud.swift */; };
@@ -54,6 +60,12 @@
 		02D8ED451B22384200DD9E1F /* SelecionaRelatorioTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecionaRelatorioTableView.swift; sourceTree = "<group>"; };
 		02D8ED471B2238A000DD9E1F /* RelatorioProvaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatorioProvaView.swift; sourceTree = "<group>"; };
 		02D8ED491B2238D600DD9E1F /* RelatorioTarefaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatorioTarefaView.swift; sourceTree = "<group>"; };
+		A128898F1B311EE0007EF84D /* AvaliacaoFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacaoFactory.swift; sourceTree = "<group>"; };
+		A12889911B311EF4007EF84D /* DisciplinaFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinaFactory.swift; sourceTree = "<group>"; };
+		A12889931B311EFF007EF84D /* TarefaFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarefaFactory.swift; sourceTree = "<group>"; };
+		A12889951B311F2A007EF84D /* AvaliacaoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacaoManager.swift; sourceTree = "<group>"; };
+		A12889971B311F36007EF84D /* DisciplinaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinaManager.swift; sourceTree = "<group>"; };
+		A12889991B311F42007EF84D /* TarefaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarefaManager.swift; sourceTree = "<group>"; };
 		A19285771B20915000AC17E2 /* Homework.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Homework.entitlements; sourceTree = "<group>"; };
 		A192857D1B20A73C00AC17E2 /* DisciplinaCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinaCloud.swift; sourceTree = "<group>"; };
 		A192857F1B20A80100AC17E2 /* AvaliacaoCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacaoCloud.swift; sourceTree = "<group>"; };
@@ -126,6 +138,19 @@
 			name = "TabBar 3 Relatorios";
 			sourceTree = "<group>";
 		};
+		A128898E1B311ECC007EF84D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A128898F1B311EE0007EF84D /* AvaliacaoFactory.swift */,
+				A12889951B311F2A007EF84D /* AvaliacaoManager.swift */,
+				A12889911B311EF4007EF84D /* DisciplinaFactory.swift */,
+				A12889971B311F36007EF84D /* DisciplinaManager.swift */,
+				A12889931B311EFF007EF84D /* TarefaFactory.swift */,
+				A12889991B311F42007EF84D /* TarefaManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
 		A192857A1B20A60600AC17E2 /* CloudKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +184,7 @@
 		E4D5287D1B1E9176009859D8 /* Homework */ = {
 			isa = PBXGroup;
 			children = (
+				A128898E1B311ECC007EF84D /* Managers */,
 				02D8ED341B2235BD00DD9E1F /* TabBar 1 */,
 				02D8ED411B22372A00DD9E1F /* TabBar 2 Calendario */,
 				02D8ED421B22378C00DD9E1F /* TabBar 3 Relatorios */,
@@ -342,7 +368,10 @@
 			files = (
 				E4D528A81B1E9423009859D8 /* CoreData.swift in Sources */,
 				A192857E1B20A73C00AC17E2 /* DisciplinaCloud.swift in Sources */,
+				A12889921B311EF4007EF84D /* DisciplinaFactory.swift in Sources */,
+				A12889941B311EFF007EF84D /* TarefaFactory.swift in Sources */,
 				A19285841B20AAA200AC17E2 /* CloudKitHelper.swift in Sources */,
+				A12889981B311F36007EF84D /* DisciplinaManager.swift in Sources */,
 				02D8ED441B2237E800DD9E1F /* RelatoriosTableView.swift in Sources */,
 				E4E8216C1B1FB3920096F22D /* Disciplina.swift in Sources */,
 				E4D528861B1E9176009859D8 /* ViewController.swift in Sources */,
@@ -357,9 +386,12 @@
 				A19285821B20A8C000AC17E2 /* TarefaCloud.swift in Sources */,
 				E4D51C0D1B307FAE00DA1E78 /* NotasController.swift in Sources */,
 				02D8ED3C1B2236B400DD9E1F /* TarefasController.swift in Sources */,
+				A12889961B311F2A007EF84D /* AvaliacaoManager.swift in Sources */,
 				02D8ED4A1B2238D600DD9E1F /* RelatorioTarefaView.swift in Sources */,
+				A12889901B311EE0007EF84D /* AvaliacaoFactory.swift in Sources */,
 				A192858A1B20FD7500AC17E2 /* OrganizaData.swift in Sources */,
 				E4D528811B1E9176009859D8 /* AppDelegate.swift in Sources */,
+				A128899A1B311F42007EF84D /* TarefaManager.swift in Sources */,
 				E42D48991B30FBF300C7B1B5 /* Avaliacao.swift in Sources */,
 				E4D528841B1E9176009859D8 /* Homework.xcdatamodeld in Sources */,
 				E4B24C951B27B9E000FDD429 /* DetalhesController.swift in Sources */,

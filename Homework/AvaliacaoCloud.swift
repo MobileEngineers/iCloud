@@ -16,8 +16,8 @@ class AvaliacaoCloud: NSObject {
     var nome : String!
     var check: NSNumber!
     var data: NSDate!
-    var materia: NSString?
-    var nota: NSNumber?
+    var materia: String?
+    var nota: Double?
     
     
     init(record : CKRecord, database: CKDatabase)
@@ -25,11 +25,11 @@ class AvaliacaoCloud: NSObject {
         self.record = record
         self.database = database
             
-        self.nome = record.objectForKey("") as! String
-        self.check = record.objectForKey("") as! NSNumber
-        self.data = record.objectForKey("") as! NSDate
-        self.materia = record.objectForKey("") as? String
-        self.nota = record.objectForKey("") as? NSNumber
+        self.nome = record.objectForKey("Name") as! String
+        self.check = record.objectForKey("check") as! NSNumber
+        self.data = record.objectForKey("data") as! NSDate
+        self.materia = record.objectForKey("materia") as? String
+        self.nota = record.objectForKey("nota") as? Double
     }
 
 }
