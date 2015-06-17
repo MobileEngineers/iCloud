@@ -99,7 +99,7 @@
                                                     <rect key="frame" x="8" y="10" width="584" height="30"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                             <animations/>
@@ -213,7 +213,6 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="cancelar:" destination="wnT-9d-6Rf" eventType="touchUpInside" id="hHe-ed-s8b"/>
-                                                        <action selector="salvarTarefa:" destination="wnT-9d-6Rf" eventType="touchUpInside" id="yBb-uS-xRl"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -253,10 +252,10 @@
             </objects>
             <point key="canvasLocation" x="-1771" y="2487"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Notas Controller-->
         <scene sceneID="Yym-ZK-DyS">
             <objects>
-                <tableViewController id="bsS-ka-a7B" sceneMemberID="viewController">
+                <tableViewController id="bsS-ka-a7B" customClass="NotasController" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Mtj-4a-CfD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -292,22 +291,23 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Qual foi sua nota?" id="1fa-Ij-osh">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="160" id="PBx-8w-Ika">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="PBx-8w-Ika">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PBx-8w-Ika" id="ce4-Eb-MtZ">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1nR-jv-hYZ">
-                                                    <rect key="frame" x="8" y="-1.5" width="584" height="162"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="De 0 a 10" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dLq-42-ztb">
+                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
                                                     <animations/>
-                                                </pickerView>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="done"/>
+                                                </textField>
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="1nR-jv-hYZ" secondAttribute="bottom" id="15V-bt-Pz2"/>
-                                                <constraint firstItem="1nR-jv-hYZ" firstAttribute="leading" secondItem="ce4-Eb-MtZ" secondAttribute="leadingMargin" id="eL4-Jg-Tie"/>
-                                                <constraint firstItem="1nR-jv-hYZ" firstAttribute="trailing" secondItem="ce4-Eb-MtZ" secondAttribute="trailingMargin" id="hQ4-jj-ubn"/>
-                                                <constraint firstItem="1nR-jv-hYZ" firstAttribute="top" secondItem="ce4-Eb-MtZ" secondAttribute="topMargin" id="ufJ-kz-7OO"/>
+                                                <constraint firstItem="dLq-42-ztb" firstAttribute="leading" secondItem="ce4-Eb-MtZ" secondAttribute="leadingMargin" id="Bic-cj-VoV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dLq-42-ztb" secondAttribute="trailing" id="Hat-CL-L3m"/>
+                                                <constraint firstAttribute="centerY" secondItem="dLq-42-ztb" secondAttribute="centerY" id="y7E-9z-WHW"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -328,6 +328,9 @@
                                                         <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="atualizar:" destination="bsS-ka-a7B" eventType="touchUpInside" id="Vho-de-81W"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <animations/>
@@ -350,6 +353,10 @@
                             <outlet property="delegate" destination="bsS-ka-a7B" id="jnS-Bs-w1R"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="segmentedControl" destination="CGo-rr-ABq" id="2vv-ae-9xr"/>
+                        <outlet property="textField" destination="dLq-42-ztb" id="0Vb-Ih-Oo0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s1C-J0-Q8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -198,6 +198,21 @@ class TarefasController: UITableViewController, DetalhesDelegate {
             let viewController = segue.destinationViewController as! DetalhesController
             viewController.delegate = self
         }
+        if segue.identifier == "tarefa" {
+            let viewController = segue.destinationViewController as! NotasController
+            viewController.disciplina = disciplina.nome
+            
+            let indexPath = tableView.indexPathForSelectedRow()
+            
+            if indexPath!.section == 0 {
+                let prova = provas.objectAtIndex(indexPath!.row) as! Avaliacao
+                viewController.prova = prova.nome
+            }
+            if indexPath!.section == 1 {
+                let trabalho = trabalhos.objectAtIndex(indexPath!.row) as! Trabalho
+                viewController.trabalho = trabalho.nome
+            }
+        }
         
     }
     

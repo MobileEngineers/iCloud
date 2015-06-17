@@ -21,6 +21,8 @@
 		A19285861B20D57E00AC17E2 /* InformacaoUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19285851B20D57E00AC17E2 /* InformacaoUsuario.swift */; };
 		A19285881B20FCA900AC17E2 /* Calendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19285871B20FCA900AC17E2 /* Calendario.swift */; };
 		A192858A1B20FD7500AC17E2 /* OrganizaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19285891B20FD7500AC17E2 /* OrganizaData.swift */; };
+		E42D48991B30FBF300C7B1B5 /* Avaliacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D48971B30FBF300C7B1B5 /* Avaliacao.swift */; };
+		E42D489A1B30FBF300C7B1B5 /* Trabalho.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D48981B30FBF300C7B1B5 /* Trabalho.swift */; };
 		E4B24C951B27B9E000FDD429 /* DetalhesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B24C941B27B9E000FDD429 /* DetalhesController.swift */; };
 		E4D51C0D1B307FAE00DA1E78 /* NotasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D51C0C1B307FAE00DA1E78 /* NotasController.swift */; };
 		E4D528811B1E9176009859D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D528801B1E9176009859D8 /* AppDelegate.swift */; };
@@ -30,8 +32,6 @@
 		E4D5288B1B1E9176009859D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D5288A1B1E9176009859D8 /* Images.xcassets */; };
 		E4D5289A1B1E9176009859D8 /* HomeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D528991B1E9176009859D8 /* HomeworkTests.swift */; };
 		E4D528A81B1E9423009859D8 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D528A71B1E9423009859D8 /* CoreData.swift */; };
-		E4E821681B1FB3920096F22D /* Avaliacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E821671B1FB3920096F22D /* Avaliacao.swift */; };
-		E4E8216A1B1FB3920096F22D /* Trabalho.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E821691B1FB3920096F22D /* Trabalho.swift */; };
 		E4E8216C1B1FB3920096F22D /* Disciplina.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E8216B1B1FB3920096F22D /* Disciplina.swift */; };
 		E4E8216F1B2072DB0096F22D /* DisciplinasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E8216E1B2072DB0096F22D /* DisciplinasViewController.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +62,8 @@
 		A19285851B20D57E00AC17E2 /* InformacaoUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacaoUsuario.swift; sourceTree = "<group>"; };
 		A19285871B20FCA900AC17E2 /* Calendario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendario.swift; sourceTree = "<group>"; };
 		A19285891B20FD7500AC17E2 /* OrganizaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizaData.swift; sourceTree = "<group>"; };
+		E42D48971B30FBF300C7B1B5 /* Avaliacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avaliacao.swift; sourceTree = "<group>"; };
+		E42D48981B30FBF300C7B1B5 /* Trabalho.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trabalho.swift; sourceTree = "<group>"; };
 		E4B24C941B27B9E000FDD429 /* DetalhesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesController.swift; sourceTree = "<group>"; };
 		E4D51C0C1B307FAE00DA1E78 /* NotasController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotasController.swift; sourceTree = "<group>"; };
 		E4D5287B1B1E9176009859D8 /* Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,8 +77,6 @@
 		E4D528981B1E9176009859D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D528991B1E9176009859D8 /* HomeworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkTests.swift; sourceTree = "<group>"; };
 		E4D528A71B1E9423009859D8 /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
-		E4E821671B1FB3920096F22D /* Avaliacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avaliacao.swift; sourceTree = "<group>"; };
-		E4E821691B1FB3920096F22D /* Trabalho.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trabalho.swift; sourceTree = "<group>"; };
 		E4E8216B1B1FB3920096F22D /* Disciplina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disciplina.swift; sourceTree = "<group>"; };
 		E4E8216E1B2072DB0096F22D /* DisciplinasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinasViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -215,8 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				E4E8216B1B1FB3920096F22D /* Disciplina.swift */,
-				E4E821691B1FB3920096F22D /* Trabalho.swift */,
-				E4E821671B1FB3920096F22D /* Avaliacao.swift */,
+				E42D48971B30FBF300C7B1B5 /* Avaliacao.swift */,
+				E42D48981B30FBF300C7B1B5 /* Trabalho.swift */,
 			);
 			name = Entidades;
 			sourceTree = "<group>";
@@ -348,10 +348,9 @@
 				E4D528861B1E9176009859D8 /* ViewController.swift in Sources */,
 				A19285881B20FCA900AC17E2 /* Calendario.swift in Sources */,
 				02D8ED481B2238A000DD9E1F /* RelatorioProvaView.swift in Sources */,
-				E4E8216A1B1FB3920096F22D /* Trabalho.swift in Sources */,
 				E4E8216F1B2072DB0096F22D /* DisciplinasViewController.swift in Sources */,
-				E4E821681B1FB3920096F22D /* Avaliacao.swift in Sources */,
 				02D8ED461B22384200DD9E1F /* SelecionaRelatorioTableView.swift in Sources */,
+				E42D489A1B30FBF300C7B1B5 /* Trabalho.swift in Sources */,
 				A19285801B20A80100AC17E2 /* AvaliacaoCloud.swift in Sources */,
 				02D8ED3A1B22367500DD9E1F /* SelecionaProvaView.swift in Sources */,
 				A19285861B20D57E00AC17E2 /* InformacaoUsuario.swift in Sources */,
@@ -361,6 +360,7 @@
 				02D8ED4A1B2238D600DD9E1F /* RelatorioTarefaView.swift in Sources */,
 				A192858A1B20FD7500AC17E2 /* OrganizaData.swift in Sources */,
 				E4D528811B1E9176009859D8 /* AppDelegate.swift in Sources */,
+				E42D48991B30FBF300C7B1B5 /* Avaliacao.swift in Sources */,
 				E4D528841B1E9176009859D8 /* Homework.xcdatamodeld in Sources */,
 				E4B24C951B27B9E000FDD429 /* DetalhesController.swift in Sources */,
 			);
