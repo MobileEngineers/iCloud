@@ -29,11 +29,11 @@ class RelatorioProvaTarefaTableView: UITableViewController {
             datePicker.date = prova.data
             if prova.nota != -1.0 {
                 feita.text = "Sim"
-                feita.tintColor = UIColor.greenColor()
+                feita.textColor = UIColor.greenColor()
                 nota.text = "\(prova.nota)"
             } else {
                 feita.text = "Não"
-                feita.tintColor = UIColor.redColor()
+                feita.textColor = UIColor.redColor()
                 nota.text = "Não feita/Em correção"
             }
             
@@ -45,11 +45,11 @@ class RelatorioProvaTarefaTableView: UITableViewController {
             datePicker.date = trabalho.data
             if trabalho.nota != -1.0 {
                 feita.text = "Sim"
-                feita.tintColor = UIColor.greenColor()
+                feita.textColor = UIColor.greenColor()
                 nota.text = "\(trabalho.nota)"
             } else {
                 feita.text = "Não"
-                feita.tintColor = UIColor.redColor()
+                feita.textColor = UIColor.redColor()
                 nota.text = "Não feito/Em correção"
             }
             

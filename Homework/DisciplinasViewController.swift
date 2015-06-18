@@ -49,7 +49,7 @@ class DisciplinasViewController: UITableViewController {
                 textField -> Void in
                 textField.textColor = UIColor.blackColor()
                 textField.layer.cornerRadius = 2
-                textField.placeholder = "Nome do projeto"
+                textField.placeholder = "Nome da disciplina"
                 textField.autocapitalizationType = UITextAutocapitalizationType.Words
                 self.inputTextField = textField
             }

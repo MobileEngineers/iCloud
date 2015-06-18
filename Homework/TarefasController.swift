@@ -37,6 +37,18 @@ class TarefasController: UITableViewController, DetalhesDelegate {
         
         CoreData.sharedInstance.managedObjectContext!.save(nil)
         
+        let localNotification = UILocalNotification()
+        localNotification.fireDate = NSDate().dateByAddingTimeInterval(-7*24*60)
+        localNotification.timeZone = NSTimeZone.defaultTimeZone()
+        localNotification.alertBody = nome
+        localNotification.alertAction = "Ver"
+        localNotification.alertTitle = nome
+        localNotification.soundName = UILocalNotificationDefaultSoundName
+        localNotification.repeatInterval = NSCalendarUnit.CalendarUnitDay
+        println(localNotification.fireDate)
+        
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        
         self.tableView.reloadData()
     }
     
@@ -49,6 +61,18 @@ class TarefasController: UITableViewController, DetalhesDelegate {
         disciplina.trabalhos = disciplina.trabalhos.setByAddingObject(novoTrabalho)
         
         CoreData.sharedInstance.managedObjectContext!.save(nil)
+        
+        let localNotification = UILocalNotification()
+        localNotification.fireDate = NSDate().dateByAddingTimeInterval(-7*24*60)
+        localNotification.timeZone = NSTimeZone.defaultTimeZone()
+        localNotification.alertBody = nome
+        localNotification.alertAction = "Ver"
+        localNotification.alertTitle = nome
+        localNotification.soundName = UILocalNotificationDefaultSoundName
+        localNotification.repeatInterval = NSCalendarUnit.CalendarUnitDay
+        println(localNotification.fireDate)
+        
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
         
         self.tableView.reloadData()
     }

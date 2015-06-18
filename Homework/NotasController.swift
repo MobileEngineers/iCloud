@@ -43,7 +43,9 @@ class NotasController: UITableViewController, UITextFieldDelegate {
 
     @IBAction func atualizar(sender: AnyObject) {
         
-        if segmentedControl.selectedSegmentIndex == 1 {
+        let today = NSDate()
+        
+        if (segmentedControl.selectedSegmentIndex == 1) {
             let string = NSString(format: "%@", textField.text)
             var nota = string.doubleValue
             if (nota > 10.0) { nota = 10.0 }
@@ -54,7 +56,7 @@ class NotasController: UITableViewController, UITextFieldDelegate {
                     if prova != nil {
                         let provas = materia.avaliacoes.allObjects as! [Avaliacao]
                         for avaliacao in provas {
-                            if avaliacao.nome == self.prova {
+                            if (avaliacao.nome == self.prova && today.compare(avaliacao.data) == NSComparisonResult.OrderedAscending) {
                                 avaliacao.setValue(nota, forKey: "nota")
                                 CoreData.sharedInstance.managedObjectContext!.save(nil)
                             }
@@ -64,7 +66,7 @@ class NotasController: UITableViewController, UITextFieldDelegate {
                     if trabalho != nil {
                         let trabalhos = materia.trabalhos.allObjects as! [Trabalho]
                         for tarefa in trabalhos {
-                            if tarefa.nome == self.trabalho {
+                            if (tarefa.nome == self.trabalho && today.compare(tarefa.data) == NSComparisonResult.OrderedAscending) {
                                 tarefa.setValue(nota, forKey: "nota")
                                 CoreData.sharedInstance.managedObjectContext!.save(nil)
                             }
