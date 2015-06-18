@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../Homework/Avaliacao.swift">
-   </FileRef>
-   <FileRef
-      location = "group:../Homework/Trabalho.swift">
-   </FileRef>
-   <FileRef
-      location = "self:Homework.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

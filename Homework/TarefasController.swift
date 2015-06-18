@@ -24,6 +24,7 @@ class TarefasController: UITableViewController, DetalhesDelegate {
         provas = disciplina.avaliacoes.allObjects
         trabalhos = disciplina.trabalhos.allObjects
         
+        self.navigationItem.title = disciplina.nome
         self.tableView.reloadData()
     }
     
@@ -148,9 +149,9 @@ class TarefasController: UITableViewController, DetalhesDelegate {
                 let alerta = UIAlertController(title: "Deletando avaliação", message: "Deseja realmente excluir essa avaliação?", preferredStyle: .ActionSheet)
                 let sim: UIAlertAction = UIAlertAction(title: "Sim", style: UIAlertActionStyle.Destructive) { action -> Void in
                     
-                    let disciplina = self.provas.objectAtIndex(indexPath.row) as! Avaliacao
+                    let prova = self.provas.objectAtIndex(indexPath.row) as! Avaliacao
                     
-                    CoreData.sharedInstance.managedObjectContext!.deleteObject(disciplina)
+                    CoreData.sharedInstance.managedObjectContext!.deleteObject(prova)
                     CoreData.sharedInstance.managedObjectContext!.save(nil)
                     
                     var request = NSFetchRequest(entityName: "Avaliacao")
@@ -171,9 +172,9 @@ class TarefasController: UITableViewController, DetalhesDelegate {
                 let alerta = UIAlertController(title: "Deletando tarefa", message: "Deseja realmente excluir essa tarefa?", preferredStyle: .ActionSheet)
                 let sim: UIAlertAction = UIAlertAction(title: "Sim", style: UIAlertActionStyle.Destructive) { action -> Void in
                     
-                    let disciplina = self.trabalhos.objectAtIndex(indexPath.row) as! Trabalho
+                    let trabalho = self.trabalhos.objectAtIndex(indexPath.row) as! Trabalho
                     
-                    CoreData.sharedInstance.managedObjectContext!.deleteObject(disciplina)
+                    CoreData.sharedInstance.managedObjectContext!.deleteObject(trabalho)
                     CoreData.sharedInstance.managedObjectContext!.save(nil)
                     
                     var request = NSFetchRequest(entityName: "Trabalho")
