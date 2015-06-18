@@ -39,14 +39,15 @@ class TarefasController: UITableViewController, DetalhesDelegate {
         CoreData.sharedInstance.managedObjectContext!.save(nil)
         
         let localNotification = UILocalNotification()
-        localNotification.fireDate = NSDate().dateByAddingTimeInterval(-7*24*60)
+        localNotification.fireDate = data.dateByAddingTimeInterval(-7*24*60*60)
         localNotification.timeZone = NSTimeZone.defaultTimeZone()
-        localNotification.alertBody = nome
+        localNotification.alertBody = "Não se esqueça de estudar"
         localNotification.alertAction = "Ver"
         localNotification.alertTitle = nome
         localNotification.soundName = UILocalNotificationDefaultSoundName
         localNotification.repeatInterval = NSCalendarUnit.CalendarUnitDay
         println(localNotification.fireDate)
+        println(localNotification.userInfo)
         
         UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
         
@@ -64,14 +65,15 @@ class TarefasController: UITableViewController, DetalhesDelegate {
         CoreData.sharedInstance.managedObjectContext!.save(nil)
         
         let localNotification = UILocalNotification()
-        localNotification.fireDate = NSDate().dateByAddingTimeInterval(-7*24*60)
+        localNotification.fireDate = entrega.dateByAddingTimeInterval(-7*24*60*60)
         localNotification.timeZone = NSTimeZone.defaultTimeZone()
-        localNotification.alertBody = nome
+        localNotification.alertBody = "Não se esqueça de escrever"
         localNotification.alertAction = "Ver"
         localNotification.alertTitle = nome
         localNotification.soundName = UILocalNotificationDefaultSoundName
         localNotification.repeatInterval = NSCalendarUnit.CalendarUnitDay
         println(localNotification.fireDate)
+        println(localNotification.userInfo)
         
         UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
         
@@ -161,6 +163,14 @@ class TarefasController: UITableViewController, DetalhesDelegate {
                     self.provas = results
                     
                     tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                    
+                    var notifications = UIApplication.sharedApplication().scheduledLocalNotifications as! [UILocalNotification]
+                    
+                    for notification in notifications {
+                        if notification.alertTitle == prova.nome {
+                            UIApplication.sharedApplication().cancelLocalNotification(notification)
+                        }
+                    }
                 }
                 alerta.addAction(sim)
                 let cancelar: UIAlertAction = UIAlertAction(title: "Cancelar", style: .Cancel) { action -> Void in self.tableView.reloadData()}
@@ -184,6 +194,14 @@ class TarefasController: UITableViewController, DetalhesDelegate {
                     self.trabalhos = results
                     
                     tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                    
+                    var notifications = UIApplication.sharedApplication().scheduledLocalNotifications as! [UILocalNotification]
+                    
+                    for notification in notifications {
+                        if notification.alertTitle == trabalho.nome {
+                            UIApplication.sharedApplication().cancelLocalNotification(notification)
+                        }
+                    }
                 }
                 alerta.addAction(sim)
                 let cancelar: UIAlertAction = UIAlertAction(title: "Cancelar", style: .Cancel) { action -> Void in self.tableView.reloadData()}
