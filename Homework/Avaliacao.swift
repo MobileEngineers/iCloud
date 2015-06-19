@@ -13,6 +13,7 @@ class Avaliacao: NSManagedObject {
 
     @NSManaged var check: Bool
     @NSManaged var data: NSDate
+    @NSManaged var eventIdentifier: String
     @NSManaged var materia: String
     @NSManaged var nome: String
     @NSManaged var nota: Double

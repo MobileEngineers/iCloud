@@ -8,19 +8,38 @@
 
 import UIKit
 import CoreData
+import EventKit
 
 class DisciplinasViewController: UITableViewController {
     
     var disciplinas: NSArray!
     var inputTextField: UITextField?
-
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         var request = NSFetchRequest(entityName: "Disciplina")
         request.returnsObjectsAsFaults = false
         
+        
         disciplinas = CoreData.sharedInstance.managedObjectContext!.executeFetchRequest(request, error: nil)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let appDelegate = UIApplication.sharedApplication().delegate
+            as? AppDelegate
+        switch EKEventStore.authorizationStatusForEntityType(EKEntityTypeEvent){
+            
+        case .Authorized:
+            println("Authorized")
+        case .Denied:
+            println("Denied")
+        case .NotDetermined:
+            appDelegate!.eventStore!.requestAccessToEntityType(EKEntityTypeEvent, completion: { (status: Bool, error: NSError!) -> Void in
+            })
+        case .Restricted:
+            println("Restricted")
+        }
     }
     
     override func viewWillAppear(animated: Bool)
@@ -40,7 +59,7 @@ class DisciplinasViewController: UITableViewController {
                 self.novaDisciplina(self.inputTextField!.text)
                 cadastro.dismissViewControllerAnimated(true, completion: nil)
                 self.tableView.reloadData()
-            }
+        }
         
         cadastro.addAction(salvar)
         
@@ -52,11 +71,11 @@ class DisciplinasViewController: UITableViewController {
                 textField.placeholder = "Nome da disciplina"
                 textField.autocapitalizationType = UITextAutocapitalizationType.Words
                 self.inputTextField = textField
-            }
+        }
         
         let cancelar: UIAlertAction = UIAlertAction(title: "Cancelar", style: .Cancel)
             {   action -> Void in cadastro.dismissViewControllerAnimated(true, completion: nil)       }
-
+        
         cadastro.addAction(cancelar)
         
         self.presentViewController(cadastro, animated: true, completion: nil)
@@ -71,35 +90,35 @@ class DisciplinasViewController: UITableViewController {
         
         CoreData.sharedInstance.managedObjectContext!.save(nil)
     }
-
+    
     override func didReceiveMemoryWarning()
     {        super.didReceiveMemoryWarning()    }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {       return 1        }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {       return disciplinas.count        }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Disciplinas Cadastradas"
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("disciplina", forIndexPath: indexPath) as! UITableViewCell
         
         let disciplina = disciplinas.objectAtIndex(indexPath.row) as! Disciplina
-
+        
         cell.textLabel?.text = disciplina.nome
-
+        
         return cell
     }
-
-
+    
+    
     
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -107,7 +126,7 @@ class DisciplinasViewController: UITableViewController {
         return true
     }
     
-
+    
     
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -134,31 +153,31 @@ class DisciplinasViewController: UITableViewController {
             alerta.addAction(cancelar)
             
             self.presentViewController(alerta, animated: true, completion: nil)
-
+            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     
-
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+    
     }
     */
-
+    
     /*
     // Override to support conditional rearranging of the table view.
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
+    // Return NO if you do not want the item to be re-orderable.
+    return true
     }
     */
-
+    
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -169,5 +188,5 @@ class DisciplinasViewController: UITableViewController {
         
     }
     
-
+    
 }

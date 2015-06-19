@@ -8,15 +8,20 @@
 
 import UIKit
 import CoreData
+import EventKit
 
 class TarefasController: UITableViewController, DetalhesDelegate {
     
     var disciplina: Disciplina!
     var trabalhos: NSArray!
     var provas: NSArray!
+    var appDelegate: AppDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        appDelegate = UIApplication.sharedApplication().delegate
+            as? AppDelegate
         
     }
     
@@ -24,53 +29,76 @@ class TarefasController: UITableViewController, DetalhesDelegate {
         provas = disciplina.avaliacoes.allObjects
         trabalhos = disciplina.trabalhos.allObjects
         
+        self.navigationItem.title = disciplina.nome
         self.tableView.reloadData()
     }
     
-    func adicionaProva(nome: String, descricao: String, data: NSDate) {
+    
+    func adicionaProva(nome: String, descricao: String, data: NSDate, error: NSErrorPointer) {
+        //Adicionando Evento
+        var event: EKEvent?
+        
+        if Calendar.Authorization() {
+            event = Calendar.addEvent("\(disciplina.nome) - \(nome)", notes: descricao, date: data)
+        }
+        
+        
         let novaProva = NSEntityDescription.insertNewObjectForEntityForName("Avaliacao", inManagedObjectContext: CoreData.sharedInstance.managedObjectContext!) as! Avaliacao
         novaProva.nome = nome
         novaProva.materia = descricao
         novaProva.data = data
         novaProva.nota = -1.0
+        novaProva.eventIdentifier = event!.eventIdentifier
         disciplina.avaliacoes = disciplina.avaliacoes.setByAddingObject(novaProva)
         
         CoreData.sharedInstance.managedObjectContext!.save(nil)
         
+        
         let localNotification = UILocalNotification()
-        localNotification.fireDate = NSDate().dateByAddingTimeInterval(-7*24*60)
+        localNotification.fireDate = data.dateByAddingTimeInterval(-7*24*60*60)
         localNotification.timeZone = NSTimeZone.defaultTimeZone()
-        localNotification.alertBody = nome
+        localNotification.alertBody = "Não se esqueça de estudar"
         localNotification.alertAction = "Ver"
         localNotification.alertTitle = nome
         localNotification.soundName = UILocalNotificationDefaultSoundName
         localNotification.repeatInterval = NSCalendarUnit.CalendarUnitDay
         println(localNotification.fireDate)
+        println(localNotification.userInfo)
         
         UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        
         
         self.tableView.reloadData()
     }
     
     func adicionaTrabalho(nome: String, descricao: String, entrega: NSDate) {
+        //Adicionando Evento
+        var event: EKEvent?
+        
+        if Calendar.Authorization() {
+            event = Calendar.addEvent("\(disciplina.nome) - \(nome)", notes: descricao, date: entrega)
+        }
+        
         let novoTrabalho = NSEntityDescription.insertNewObjectForEntityForName("Trabalho", inManagedObjectContext: CoreData.sharedInstance.managedObjectContext!) as! Trabalho
         novoTrabalho.nome = nome
         novoTrabalho.descricao = descricao
         novoTrabalho.data = entrega
         novoTrabalho.nota = -1.0
+        novoTrabalho.eventIdentifier = event!.eventIdentifier
         disciplina.trabalhos = disciplina.trabalhos.setByAddingObject(novoTrabalho)
         
         CoreData.sharedInstance.managedObjectContext!.save(nil)
         
         let localNotification = UILocalNotification()
-        localNotification.fireDate = NSDate().dateByAddingTimeInterval(-7*24*60)
+        localNotification.fireDate = entrega.dateByAddingTimeInterval(-7*24*60*60)
         localNotification.timeZone = NSTimeZone.defaultTimeZone()
-        localNotification.alertBody = nome
+        localNotification.alertBody = "Não se esqueça de escrever"
         localNotification.alertAction = "Ver"
         localNotification.alertTitle = nome
         localNotification.soundName = UILocalNotificationDefaultSoundName
         localNotification.repeatInterval = NSCalendarUnit.CalendarUnitDay
         println(localNotification.fireDate)
+        println(localNotification.userInfo)
         
         UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
         
@@ -135,8 +163,8 @@ class TarefasController: UITableViewController, DetalhesDelegate {
     
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    // Return NO if you do not want the specified item to be editable.
-    return true
+        // Return NO if you do not want the specified item to be editable.
+        return true
     }
     
     
@@ -148,9 +176,20 @@ class TarefasController: UITableViewController, DetalhesDelegate {
                 let alerta = UIAlertController(title: "Deletando avaliação", message: "Deseja realmente excluir essa avaliação?", preferredStyle: .ActionSheet)
                 let sim: UIAlertAction = UIAlertAction(title: "Sim", style: UIAlertActionStyle.Destructive) { action -> Void in
                     
-                    let disciplina = self.provas.objectAtIndex(indexPath.row) as! Avaliacao
+                    let prova = self.provas.objectAtIndex(indexPath.row) as! Avaliacao
                     
-                    CoreData.sharedInstance.managedObjectContext!.deleteObject(disciplina)
+                    //remover evento do calendário
+                    Calendar.removeEvent(prova.eventIdentifier, error: nil)
+                    
+                    var notifications = UIApplication.sharedApplication().scheduledLocalNotifications as! [UILocalNotification]
+                    
+                    for notification in notifications {
+                        if notification.alertTitle == prova.nome {
+                            UIApplication.sharedApplication().cancelLocalNotification(notification)
+                        }
+                    }
+                    
+                    CoreData.sharedInstance.managedObjectContext!.deleteObject(prova)
                     CoreData.sharedInstance.managedObjectContext!.save(nil)
                     
                     var request = NSFetchRequest(entityName: "Avaliacao")
@@ -171,9 +210,20 @@ class TarefasController: UITableViewController, DetalhesDelegate {
                 let alerta = UIAlertController(title: "Deletando tarefa", message: "Deseja realmente excluir essa tarefa?", preferredStyle: .ActionSheet)
                 let sim: UIAlertAction = UIAlertAction(title: "Sim", style: UIAlertActionStyle.Destructive) { action -> Void in
                     
-                    let disciplina = self.trabalhos.objectAtIndex(indexPath.row) as! Trabalho
+                    let trabalho = self.trabalhos.objectAtIndex(indexPath.row) as! Trabalho
                     
-                    CoreData.sharedInstance.managedObjectContext!.deleteObject(disciplina)
+                    //remover evento do calendário
+                    Calendar.removeEvent(trabalho.eventIdentifier, error: nil)
+                    
+                    var notifications = UIApplication.sharedApplication().scheduledLocalNotifications as! [UILocalNotification]
+                    
+                    for notification in notifications {
+                        if notification.alertTitle == trabalho.nome {
+                            UIApplication.sharedApplication().cancelLocalNotification(notification)
+                        }
+                    }
+                    
+                    CoreData.sharedInstance.managedObjectContext!.deleteObject(trabalho)
                     CoreData.sharedInstance.managedObjectContext!.save(nil)
                     
                     var request = NSFetchRequest(entityName: "Trabalho")
