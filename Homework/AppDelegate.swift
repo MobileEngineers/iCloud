@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
         
+//      UIApplication.sharedApplication().cancelAllLocalNotifications()
         println(UIApplication.sharedApplication().scheduledLocalNotifications)
         
         return true
