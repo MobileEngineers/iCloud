@@ -200,13 +200,14 @@ class TarefasController: UITableViewController, DetalhesDelegate {
                     
                     tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
                     
-                    var notifications = UIApplication.sharedApplication().scheduledLocalNotifications as! [UILocalNotification]
-                    
-                    for notification in notifications {
-                        if notification.alertTitle == prova.nome {
-                            UIApplication.sharedApplication().cancelLocalNotification(notification)
-                        }
-                    }
+                
+//                    var notifications = UIApplication.sharedApplication().scheduledLocalNotifications as! [UILocalNotification]
+//                    
+//                    for notification in notifications {
+//                        if notification.alertTitle == prova.nome {
+//                            UIApplication.sharedApplication().cancelLocalNotification(notification)
+//                        }
+//                    }
                 }
                 alerta.addAction(sim)
                 let cancelar: UIAlertAction = UIAlertAction(title: "Cancelar", style: .Cancel) { action -> Void in self.tableView.reloadData()}
@@ -242,13 +243,13 @@ class TarefasController: UITableViewController, DetalhesDelegate {
                     
                     tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
                     
-                    var notifications = UIApplication.sharedApplication().scheduledLocalNotifications as! [UILocalNotification]
-                    
-                    for notification in notifications {
-                        if notification.alertTitle == trabalho.nome {
-                            UIApplication.sharedApplication().cancelLocalNotification(notification)
-                        }
-                    }
+//                    var notifications = UIApplication.sharedApplication().scheduledLocalNotifications as! [UILocalNotification]
+//                    
+//                    for notification in notifications {
+//                        if notification.alertTitle == trabalho.nome {
+//                            UIApplication.sharedApplication().cancelLocalNotification(notification)
+//                        }
+//                    }
                 }
                 alerta.addAction(sim)
                 let cancelar: UIAlertAction = UIAlertAction(title: "Cancelar", style: .Cancel) { action -> Void in self.tableView.reloadData()}
