@@ -27,6 +27,7 @@
 		A192858A1B20FD7500AC17E2 /* OrganizaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19285891B20FD7500AC17E2 /* OrganizaData.swift */; };
 		DD93441B1B34A9E00090123D /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD93441A1B34A9E00090123D /* Calendar.swift */; };
 		DD93441D1B34B80A0090123D /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD93441C1B34B80A0090123D /* EventKit.framework */; };
+		DD93441F1B34D6C10090123D /* Atividade.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD93441E1B34D6C10090123D /* Atividade.swift */; };
 		E42D48991B30FBF300C7B1B5 /* Avaliacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D48971B30FBF300C7B1B5 /* Avaliacao.swift */; };
 		E42D489A1B30FBF300C7B1B5 /* Trabalho.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D48981B30FBF300C7B1B5 /* Trabalho.swift */; };
 		E4B24C951B27B9E000FDD429 /* DetalhesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B24C941B27B9E000FDD429 /* DetalhesController.swift */; };
@@ -74,6 +75,7 @@
 		A19285891B20FD7500AC17E2 /* OrganizaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizaData.swift; sourceTree = "<group>"; };
 		DD93441A1B34A9E00090123D /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		DD93441C1B34B80A0090123D /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		DD93441E1B34D6C10090123D /* Atividade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atividade.swift; sourceTree = "<group>"; };
 		E42D48971B30FBF300C7B1B5 /* Avaliacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avaliacao.swift; sourceTree = "<group>"; };
 		E42D48981B30FBF300C7B1B5 /* Trabalho.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trabalho.swift; sourceTree = "<group>"; };
 		E4B24C941B27B9E000FDD429 /* DetalhesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		E4D528721B1E9175009859D8 = {
 			isa = PBXGroup;
 			children = (
+				DD93441E1B34D6C10090123D /* Atividade.swift */,
 				DD93441C1B34B80A0090123D /* EventKit.framework */,
 				DD93441A1B34A9E00090123D /* Calendar.swift */,
 				E4D5287D1B1E9176009859D8 /* Homework */,
@@ -392,6 +395,7 @@
 				E4D528811B1E9176009859D8 /* AppDelegate.swift in Sources */,
 				A128899A1B311F42007EF84D /* TarefaManager.swift in Sources */,
 				E42D48991B30FBF300C7B1B5 /* Avaliacao.swift in Sources */,
+				DD93441F1B34D6C10090123D /* Atividade.swift in Sources */,
 				E4D528841B1E9176009859D8 /* Homework.xcdatamodeld in Sources */,
 				E4B24C951B27B9E000FDD429 /* DetalhesController.swift in Sources */,
 				DD93441B1B34A9E00090123D /* Calendar.swift in Sources */,
