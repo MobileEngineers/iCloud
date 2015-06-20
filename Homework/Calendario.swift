@@ -13,7 +13,7 @@ import EventKit
 
 
 class Calendario: UIViewController, UITableViewDelegate, UITableViewDataSource/*, CloudKitHelperDelegate */ {
-    
+    var array0 = NSMutableArray()
     var array1 = NSMutableArray()
     var array2 = NSMutableArray()
     var array3 = NSMutableArray()
@@ -49,6 +49,7 @@ class Calendario: UIViewController, UITableViewDelegate, UITableViewDataSource/*
         if atividade1.data.compare(date2!) == NSComparisonResult.OrderedDescending
         {
             NSLog("nao chegou em 7 dias");
+            
         } else if atividade1.data.compare(date2!) == NSComparisonResult.OrderedAscending
         {
             for(var i = 7; i>=0; i-- ){
@@ -81,7 +82,8 @@ class Calendario: UIViewController, UITableViewDelegate, UITableViewDataSource/*
                         array2.addObject(atividade1)}
                     if comps2.day == 1{
                         array1.addObject(atividade1)}
-                
+                    if comps2.day == 0{
+                        array0.addObject(atividade1)}
                 }
         
         
@@ -111,6 +113,8 @@ class Calendario: UIViewController, UITableViewDelegate, UITableViewDataSource/*
         array3.removeAllObjects()
         array2.removeAllObjects()
         array1.removeAllObjects()
+        array0.removeAllObjects()
+
 
         
         disciplinas = CoreData.sharedInstance.managedObjectContext!.executeFetchRequest(request, error: nil)
@@ -173,25 +177,29 @@ class Calendario: UIViewController, UITableViewDelegate, UITableViewDataSource/*
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        
         if section == 0{
-        return array1.count
+        return array0.count
         }else
         if section == 1{
-            return array2.count
+            return array1.count
         }else
         if section == 2{
-            return array3.count
+            return array2.count
         }else
         if section == 3{
-            return array4.count
+            return array3.count
         }else
         if section == 4{
-            return array5.count
+            return array4.count
         }else
         if section == 5{
+            return array5.count
+        }else
+        if section == 6{
             return array6.count
-        }else {
-            return self.array7.count
+        }else{
+            return array7.count
         }
     }
     
@@ -203,30 +211,34 @@ class Calendario: UIViewController, UITableViewDelegate, UITableViewDataSource/*
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         var cell =  tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         if indexPath.section == 0{
-            var atividade1 = array1.objectAtIndex(indexPath.row) as! Atividade
+            var atividade1 = array0.objectAtIndex(indexPath.row) as! Atividade
             cell.textLabel?.text = atividade1.nome
         }
         if indexPath.section == 1{
-            var atividade1 = array2.objectAtIndex(indexPath.row) as! Atividade
+            var atividade1 = array1.objectAtIndex(indexPath.row) as! Atividade
             cell.textLabel?.text = atividade1.nome
         }
         if indexPath.section == 2{
-            var atividade1 = array3.objectAtIndex(indexPath.row) as! Atividade
+            var atividade1 = array2.objectAtIndex(indexPath.row) as! Atividade
             cell.textLabel?.text = atividade1.nome
         }
         if indexPath.section == 3{
-            var atividade1 = array4.objectAtIndex(indexPath.row) as! Atividade
+            var atividade1 = array3.objectAtIndex(indexPath.row) as! Atividade
             cell.textLabel?.text = atividade1.nome
         }
         if indexPath.section == 4{
-            var atividade1 = array5.objectAtIndex(indexPath.row) as! Atividade
+            var atividade1 = array4.objectAtIndex(indexPath.row) as! Atividade
             cell.textLabel?.text = atividade1.nome
         }
         if indexPath.section == 5{
-            var atividade1 = array6.objectAtIndex(indexPath.row) as! Atividade
+            var atividade1 = array5.objectAtIndex(indexPath.row) as! Atividade
             cell.textLabel?.text = atividade1.nome
         }
         if indexPath.section == 6{
+            var atividade1 = array6.objectAtIndex(indexPath.row) as! Atividade
+            cell.textLabel?.text = atividade1.nome
+        }
+        if indexPath.section == 7{
             var atividade1 = array7.objectAtIndex(indexPath.row) as! Atividade
             cell.textLabel?.text = atividade1.nome
         }
