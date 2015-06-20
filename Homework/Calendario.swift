@@ -202,6 +202,18 @@ class Calendario: UIViewController, UITableViewDelegate, UITableViewDataSource/*
             return array7.count
         }
     }
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        if section == 0{
+            return "Hoje"
+        }else
+            if section == 1{
+                return "amanhã"
+            }else{
+                return "em " + "\(section + 1) " + "dias"
+                
+        }
+    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 7
