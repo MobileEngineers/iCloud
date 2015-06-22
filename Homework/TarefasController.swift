@@ -66,7 +66,7 @@ class TarefasController: UITableViewController, DetalhesDelegate {
         println(localNotification.userInfo)
         
         UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
-        
+        //
         
         self.tableView.reloadData()
     }
